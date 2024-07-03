@@ -1,0 +1,67 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+:root {
+	--primary-color: rgb(161, 161, 161);
+}
+
+main {
+	padding: 1rem 2rem;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+input,
+button {
+	border: none;
+}
+
+button {
+	background-color: black;
+	color: white;
+}
+
+button:hover {
+	background-color: rgb(86, 86, 86);
+}
+
+.add-names {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	background-color: rgb(219, 220, 220);
+}
+
+#name,
+.add-btn,
+.save-btn,
+.delete-btn,
+.name-item {
+	border-radius: 0.3rem;
+	padding: 0.4rem 1rem;
+	font-size: 1.1rem;
+}
+
+#name {
+	background-color: var(--primary-color);
+}
+
+.name-item {
+	background-color: var(--primary-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.name-options {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
