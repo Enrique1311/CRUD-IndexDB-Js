@@ -21,8 +21,15 @@ document.querySelector(".add-btn").addEventListener("click", () => {
 	let name = document.getElementById("name").value;
 
 	if (name.length > 0) {
-		addObject({ name });
-		readObjects();
+		if (document.querySelector(".save-btn") != undefined) {
+			if (confirm("You have unsaved items. ¿Continue anyway?")) {
+				addObject({ name });
+				readObjects();
+			}
+		} else {
+			addObject({ name });
+			readObjects();
+		}
 	}
 });
 
@@ -83,7 +90,7 @@ const namesHTML = (id, name) => {
 	$deleteBtn.textContent = "Delete";
 
 	$h2.textContent = name.name;
-	$h2.setAttribute("editable", "true");
+	$h2.setAttribute("contenteditable", "true");
 	$h2.setAttribute("spellcheck", "false");
 
 	$nameOptions.appendChild($saveBtn);
