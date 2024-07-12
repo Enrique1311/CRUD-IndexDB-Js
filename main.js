@@ -24,10 +24,12 @@ document.querySelector(".add-btn").addEventListener("click", () => {
 		if (document.querySelector(".save-btn") != undefined) {
 			if (confirm("You have unsaved items. ¿Continue anyway?")) {
 				addObject({ name });
+				name.value = "";
 				readObjects();
 			}
 		} else {
 			addObject({ name });
+			name.value = "";
 			readObjects();
 		}
 	}
